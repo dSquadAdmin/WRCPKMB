@@ -13,7 +13,7 @@ import java.awt.*;
 public class MainLoad extends JFrame implements ChangeListener {
     private JTabbedPane tpane;
     private NetworkPane npane;
-    public MiningPane mpane;
+    private MiningPane mpane;
     private Developer devpane;
     private JLabel statuslabel;
     private JPanel statuspanel;
@@ -22,7 +22,7 @@ public class MainLoad extends JFrame implements ChangeListener {
     public MainLoad() {
     }
 
-    private MainLoad(String x) {
+    public MainLoad(String x) {
         setTitle(x);
         setSize(1600, 900);
         BorderLayout layout = new BorderLayout();
@@ -55,14 +55,6 @@ public class MainLoad extends JFrame implements ChangeListener {
         setVisible(true);
     }
 
-    public static void main(String args[]) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new MainLoad("WSN MONITOR");
-            }
-        });
-    }
 
     public void setStatuslabel(String msg) {
         statuslabel.setText(msg);

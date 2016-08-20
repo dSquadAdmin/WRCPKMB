@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82a44fea-bd42-47ca-8021-506acf0e6f06" name="Default" comment="" />
+    <list default="true" id="82a44fea-bd42-47ca-8021-506acf0e6f06" name="Default" comment="data base updated">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cluster/plots/CountMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/cluster/plots/PlotGraph.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/cluster/clusterer/data/PlotGraph.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/537993ab-bfa5-49ec-89be-a1557fa2f929.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/537993ab-bfa5-49ec-89be-a1557fa2f929.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WSN/MainLoad.java" afterPath="$PROJECT_DIR$/src/WSN/MainLoad.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WSN/MiningPane.java" afterPath="$PROJECT_DIR$/src/WSN/MiningPane.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/menuPlugin/DataBase.java" afterPath="$PROJECT_DIR$/src/menuPlugin/DataBase.java" />
+    </list>
     <ignored path="wsn.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,6 +25,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/wsn$Main.coverage" NAME="Main Coverage Results" MODIFIED="1471931631758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -23,6 +40,48 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - dbase@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - dbase@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dbase" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - dbase@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dbase" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -33,23 +92,28 @@
       <file leaf-file-name="MiningPane.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WSN/MiningPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
-              <folding>
-                <element signature="e#2108#2109#0" expanded="false" />
-                <element signature="e#2150#2151#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="147">
+              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataBase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuPlugin/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+            <state relative-caret-position="109">
+              <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
               <folding>
-                <marker date="1471611063357" expanded="true" signature="4079:4093" ph="SELECT * FRO... missingValue" />
+                <element signature="imports" expanded="true" />
+                <marker date="1472130163076" expanded="true" signature="4032:4046" ph="SELECT * FRO... missingValue" />
+                <marker date="1472130163076" expanded="true" signature="6726:6923" ph="INSERT INTO test_db... " />
+                <marker date="1472130163076" expanded="true" signature="6726:6969" ph="INSERT INTO test_db... " />
+                <marker date="1472130163076" expanded="true" signature="6726:7015" ph="INSERT INTO test_db... " />
+                <marker date="1472130163076" expanded="true" signature="6726:7061" ph="INSERT INTO test_db... " />
+                <marker date="1472130163076" expanded="true" signature="6726:7107" ph="INSERT INTO test_db... " />
+                <marker date="1472130163076" expanded="true" signature="6726:7122" ph="INSERT INTO test_db... " />
+                <marker date="1472130163076" expanded="true" signature="6726:7123" ph="INSERT INTO test_db... " />
               </folding>
             </state>
           </provider>
@@ -58,67 +122,76 @@
       <file leaf-file-name="Visualize.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/menuPlugin/Visualize.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state relative-caret-position="187">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="PlotGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/PlotGraph.java">
+        <entry file="file://$PROJECT_DIR$/src/cluster/plots/PlotGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Clusters.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/Clusters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+              <folding>
+                <element signature="e#372#373#0" expanded="false" />
+                <element signature="e#411#412#0" expanded="false" />
+                <element signature="e#455#456#0" expanded="false" />
+                <element signature="e#486#487#0" expanded="false" />
+                <element signature="e#515#516#0" expanded="false" />
+                <element signature="e#548#549#0" expanded="false" />
+                <element signature="e#578#579#0" expanded="false" />
+                <element signature="e#606#607#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cluster/plots/CountMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbScan.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/dbscan/DbScan.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="false" />
+                <element signature="e#253#254#0" expanded="false" />
+                <element signature="e#313#314#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/Node.java">
+      <file leaf-file-name="MainLoad.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/WSN/MainLoad.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="810">
+              <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
               <folding>
-                <element signature="e#889#890#0" expanded="false" />
-                <element signature="e#923#924#0" expanded="false" />
-                <element signature="e#951#952#0" expanded="false" />
-                <element signature="e#979#980#0" expanded="false" />
-                <element signature="e#1009#1010#0" expanded="false" />
-                <element signature="e#1044#1045#0" expanded="false" />
-                <element signature="e#1077#1078#0" expanded="false" />
-                <element signature="e#1114#1115#0" expanded="false" />
-                <element signature="e#1149#1150#0" expanded="false" />
-                <element signature="e#1181#1182#0" expanded="false" />
-                <element signature="e#1214#1215#0" expanded="false" />
-                <element signature="e#1244#1245#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/menuPlugin/FileMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3794#3795#0" expanded="false" />
-                <element signature="e#3849#3850#0" expanded="false" />
+                <element signature="e#1663#1664#0" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,6 +205,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -147,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/dbscan/DbScan.java" />
         <option value="$PROJECT_DIR$/src/clusterer/DbScan.java" />
         <option value="$PROJECT_DIR$/src/cluster/Attrib.java" />
-        <option value="$PROJECT_DIR$/src/WSN/MainLoad.java" />
         <option value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/ArrayList.class" />
         <option value="$PROJECT_DIR$/src/cluster/Clusters.java" />
         <option value="$PROJECT_DIR$/src/menuPlugin/FileMenu.java" />
@@ -162,14 +237,22 @@
         <option value="$PROJECT_DIR$/src/cluster/clusterer/dbscan/Point.java" />
         <option value="$PROJECT_DIR$/src/cluster/clusterer/dbscan/Utility.java" />
         <option value="$PROJECT_DIR$/src/cluster/DbScan.java" />
-        <option value="$PROJECT_DIR$/src/WSN/MiningPane.java" />
         <option value="$PROJECT_DIR$/src/cluster/clusterer/data/Clusters.java" />
         <option value="$PROJECT_DIR$/src/cluster/clusterer/data/Node.java" />
         <option value="$PROJECT_DIR$/src/cluster/clusterer/dbscan/DbScan.java" />
         <option value="$PROJECT_DIR$/src/menuPlugin/MBar.java" />
-        <option value="$PROJECT_DIR$/src/menuPlugin/DataBase.java" />
         <option value="$PROJECT_DIR$/src/menuPlugin/Visualize.java" />
         <option value="$PROJECT_DIR$/src/cluster/clusterer/data/PlotGraph.java" />
+        <option value="$PROJECT_DIR$/src/cluster/plots/MapReduce.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/cluster/plots/CountMap.java" />
+        <option value="$PROJECT_DIR$/src/WSN/MiningPane.java" />
+        <option value="$PROJECT_DIR$/src/cluster/plots/PlotGraph.java" />
+        <option value="dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.test_set" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/537993ab-bfa5-49ec-89be-a1557fa2f929/console.sql" />
+        <option value="dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.table_1" />
+        <option value="$PROJECT_DIR$/src/menuPlugin/DataBase.java" />
+        <option value="$PROJECT_DIR$/src/WSN/MainLoad.java" />
       </list>
     </option>
   </component>
@@ -256,105 +339,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="menuPlugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clusterer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dbscan" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="clusterer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jfreechart-1.0.19.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jfree" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jfreechart-1.0.19.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wsn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="WSN" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,26 +357,32 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gant" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/jcommon-xml-1.0.23.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/hadoop-2.6.4-src" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="database.data.extractors.current" value="Comma-separated (CSV)" />
     <property name="TODO_SCOPE" value="Project Production Files" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JSON" />
   </component>
-  <component name="RunManager" selected="Application.MainLoad">
-    <configuration default="false" name="MainLoad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="cluster" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="WSN.MainLoad" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
@@ -816,11 +807,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.MainLoad" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.MainLoad" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -870,11 +861,17 @@
       <workItem from="1471437175184" duration="1826000" />
       <workItem from="1471610683735" duration="2302000" />
       <workItem from="1471614270084" duration="89000" />
+      <workItem from="1471851970024" duration="625000" />
+      <workItem from="1471924570760" duration="9080000" />
+      <workItem from="1472099683603" duration="2062000" />
+      <workItem from="1472107732794" duration="1156000" />
+      <workItem from="1472120808235" duration="3520000" />
+      <workItem from="1472125021302" duration="5758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108119000" />
+    <option name="totallyTimeSpent" value="130320000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -887,22 +884,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869565" sideWeight="0.4969651" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269565" sideWeight="0.3892261" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3257443" sideWeight="0.38467374" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269565" sideWeight="0.6130501" order="7" side_tool="true" content_ui="tabs" x="0" y="294" width="1366" height="206" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.206655" sideWeight="0.6198786" order="7" side_tool="true" content_ui="tabs" x="0" y="294" width="1366" height="206" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6695652" sideWeight="0.38694993" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.206655" sideWeight="0.3801214" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869565" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32749563" sideWeight="0.4969651" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962063" sideWeight="0.49391305" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852808" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962063" sideWeight="0.49391305" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27162367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -913,6 +910,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928678" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924694" sideWeight="0.44537178" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -954,6 +953,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="data base updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="data base updated" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -965,41 +968,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/WSN/MainLoad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/dbscan/DbScan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/Clusters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/netcore/Packager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/menuPlugin/FileMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1162,14 +1130,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/537993ab-bfa5-49ec-89be-a1557fa2f929/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.test_1">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.test_1">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -1178,22 +1144,17 @@
           </column-attributes>
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/test_errors.txt" />
     <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.test">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1205,40 +1166,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuPlugin/TableNameHandler.java" />
-    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.table1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.test_set">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WSN/MainLoad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WSN/Developer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1256,15 +1183,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuPlugin/FileMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/menuPlugin/MBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3794#3795#0" expanded="false" />
-            <element signature="e#3849#3850#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jfreechart-1.0.19.jar!/org/jfree/data/jdbc/JDBCPieDataset.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/jfreechart-1.0.19-sources.jar!/org/jfree/data/jdbc/JDBCPieDataset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1004">
+          <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1289,33 +1225,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/menuPlugin/MBar.java">
+    <entry file="file://$PROJECT_DIR$/src/menuPlugin/FileMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/jfreechart-1.0.19.jar!/org/jfree/data/jdbc/JDBCPieDataset.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/jfreechart-1.0.19-sources.jar!/org/jfree/data/jdbc/JDBCPieDataset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1004">
-          <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/Clusters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="1335">
+          <caret line="101" column="12" selection-start-line="101" selection-start-column="12" selection-end-line="101" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3794#3795#0" expanded="false" />
+            <element signature="e#3849#3850#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,39 +1247,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WSN/MiningPane.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
+        <state relative-caret-position="105">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding>
-            <element signature="e#2108#2109#0" expanded="false" />
-            <element signature="e#2150#2151#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#253#254#0" expanded="false" />
+            <element signature="e#313#314#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/Clusters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding>
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#411#412#0" expanded="false" />
+            <element signature="e#455#456#0" expanded="false" />
+            <element signature="e#486#487#0" expanded="false" />
+            <element signature="e#515#516#0" expanded="false" />
+            <element signature="e#548#549#0" expanded="false" />
+            <element signature="e#578#579#0" expanded="false" />
+            <element signature="e#606#607#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/jfreechart-1.0.19.jar!/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.test_set">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="c7" languageId="JSON" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.table_1">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.table1">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/537993ab-bfa5-49ec-89be-a1557fa2f929/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cluster/plots/CountMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuPlugin/Visualize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="187">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cluster/clusterer/data/PlotGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+    <entry file="dbDummy://dbtable:/f50d2810/537993ab-bfa5-49ec-89be-a1557fa2f929/dbase.public.test_db">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cluster/plots/PlotGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/menuPlugin/DataBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+        <state relative-caret-position="109">
+          <caret line="149" column="4" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
           <folding>
-            <marker date="1471611063357" expanded="true" signature="4079:4093" ph="SELECT * FRO... missingValue" />
+            <element signature="imports" expanded="true" />
+            <marker date="1472130163076" expanded="true" signature="4032:4046" ph="SELECT * FRO... missingValue" />
+            <marker date="1472130163076" expanded="true" signature="6726:6923" ph="INSERT INTO test_db... " />
+            <marker date="1472130163076" expanded="true" signature="6726:6969" ph="INSERT INTO test_db... " />
+            <marker date="1472130163076" expanded="true" signature="6726:7015" ph="INSERT INTO test_db... " />
+            <marker date="1472130163076" expanded="true" signature="6726:7061" ph="INSERT INTO test_db... " />
+            <marker date="1472130163076" expanded="true" signature="6726:7107" ph="INSERT INTO test_db... " />
+            <marker date="1472130163076" expanded="true" signature="6726:7122" ph="INSERT INTO test_db... " />
+            <marker date="1472130163076" expanded="true" signature="6726:7123" ph="INSERT INTO test_db... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WSN/MiningPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WSN/MainLoad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+          <folding>
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
           </folding>
         </state>
       </provider>

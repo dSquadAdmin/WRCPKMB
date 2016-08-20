@@ -1,7 +1,9 @@
 package WSN;
 
 import cluster.clusterer.dbscan.DbScan;
+import cluster.plots.CountMap;
 import menuPlugin.MBar;
+
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
@@ -16,6 +18,8 @@ import java.util.ArrayList;
  */
 public class MiningPane extends JPanel implements TreeSelectionListener{
     public JTextArea disp;
+    public ArrayList<String> data = new ArrayList<String> ( );
+    public ArrayList<String> data1 = new ArrayList<> ( ); //data from database
     private JMenuBar mbar;
     private JTree tree;
     private JScrollPane jsp;
@@ -23,9 +27,7 @@ public class MiningPane extends JPanel implements TreeSelectionListener{
     private DefaultMutableTreeNode root;
     private MainLoad handle;
     private DbScan dbScan;
-
-    public ArrayList<String> data = new ArrayList<String>();
-    public ArrayList<String> data1 = new ArrayList<>(); //data from database
+    private JPanel layoutpane;
 
     MiningPane(MainLoad handle) {
         this.handle = handle;
@@ -36,10 +38,11 @@ public class MiningPane extends JPanel implements TreeSelectionListener{
         setSize(dim);
         mbar = new MBar(this);
         add(mbar, layout.NORTH);
+        layoutpane = new JPanel ( );
+        layoutpane.setLayout ( new GridLayout ( 1, 5 ) );
 
         disp = new JTextArea();
         jsp = new JScrollPane(disp);
-
         root = new DefaultMutableTreeNode("Analysis Options");
         initNode();
         tree = new JTree(root);
@@ -47,10 +50,11 @@ public class MiningPane extends JPanel implements TreeSelectionListener{
         tree.addTreeSelectionListener(this);
         trs = new JScrollPane(tree);
 
-        add(trs, layout.WEST);
+        add ( trs, BorderLayout.EAST );
         add(jsp, BorderLayout.CENTER);
 
     }
+
 
     void initNode() {
         DefaultMutableTreeNode patternMinig = new DefaultMutableTreeNode("Pattern");
@@ -124,7 +128,8 @@ public class MiningPane extends JPanel implements TreeSelectionListener{
     }
 
     public void plot(){
-        dbScan.plot();
+        //dbScan.plot();
+        new CountMap ( data );
     }
 
 }

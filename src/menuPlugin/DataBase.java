@@ -1,15 +1,15 @@
 package menuPlugin;
 
 import WSN.MiningPane;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by ksv on 4/3/16.
@@ -56,6 +56,23 @@ public class DataBase extends JMenu implements ActionListener {
         add(close);
     }
 
+    public static int update(Connection connection, String sql, List<Object> parameters) throws SQLException {
+        int numRowsUpdated = 0;
+        PreparedStatement ps = null;
+        try {
+            ps = connection.prepareStatement ( sql );
+
+            int i = 0;
+            for (Object parameter : parameters) {
+                ps.setObject ( ++i, parameter );
+            }
+            numRowsUpdated = ps.executeUpdate ( );
+        } finally {
+            ps.close ( );
+        }
+        return numRowsUpdated;
+    } /** End of the connect data base*/
+
     /**
      * Method to connect to the database
      */
@@ -88,17 +105,15 @@ public class DataBase extends JMenu implements ActionListener {
             String fulladdr = "jdbc:postgresql://" + ADDR + "/" + DB;
             try {
                 this.con = DriverManager.getConnection(fulladdr, USER, PASS);
-                con.setAutoCommit(false);
-            }
-            catch (SQLException exceotion) {
+                handle.sendStatus ( "Connected to database ....." );
+            } catch (SQLException exception) {
                 JOptionPane.showMessageDialog(this,
                         "Sorry! Connection cannot be established",
                         "Error!",
-                        JOptionPane.ERROR_MESSAGE);;
+                        JOptionPane.ERROR_MESSAGE );
             }
-            handle.disp.setText("Data Base Connected ............");
         }
-    } /** End of the connect data base*/
+    }
 
     /**
      *  Method to browse database
@@ -128,7 +143,7 @@ public class DataBase extends JMenu implements ActionListener {
                     o[0].toString()
             );
             if(s!=null && s.length()>0){
-                System.out.print(s);
+                handle.sendStatus ( s );
                 stmt = con.createStatement();
                 String query = "SELECT * FROM "+s;
                 handle.disp.setText ( "" );
@@ -141,10 +156,7 @@ public class DataBase extends JMenu implements ActionListener {
             }
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this,
-                    "The connection is either closed or is null!\nCannot retreive any data",
-                    "Error!",
-                    JOptionPane.ERROR_MESSAGE);;
+            showError ( );
         }
     }/*End of browse database*/
 
@@ -153,8 +165,63 @@ public class DataBase extends JMenu implements ActionListener {
      */
     public void updateDatabase(){
         if(!(handle.data.isEmpty())){
-            for (String data: handle.data) {
-                /* do something */
+            try {
+                Statement st = con.createStatement ( );
+                if (con.getAutoCommit ( )) {
+                    con.setAutoCommit ( false );
+                }
+
+                ArrayList<String> tableList = new ArrayList<> ( );
+                DatabaseMetaData dbmd = con.getMetaData ( );
+                ResultSet tables = dbmd.getTables ( null, null, "%", new String[]{"TABLE"} );
+                while (tables.next ( )) {
+                    String S = tables.getString ( "TABLE_NAME" );
+                    tableList.add ( S );
+                }
+
+                Object[] o = tableList.toArray ( );
+                //Object[] possibilities = {"ham", "spam", "yam"};
+                String s = (String) JOptionPane.showInputDialog (
+                        this,
+                        "Dataset",
+                        "Select Data",
+                        JOptionPane.PLAIN_MESSAGE,
+                        null,
+                        o,
+                        o[0].toString ( )
+                );
+
+                String db = (s != null && s.length ( ) > 0) ? s : "test_db";
+                handle.sendStatus ( db );
+
+
+                String sqlUpdate = "INSERT INTO " + db + "(c1, c2, c3, c4, c5, c6, c7) VALUES(?,?,?,?,?,?,?)";
+                for (String data : handle.data) {
+                    String[] dataset = data.split ( "," );
+                    List params = Arrays.asList ( Double.parseDouble ( dataset[0] ),
+                            Double.parseDouble ( dataset[1] ),
+                            Double.parseDouble ( dataset[2] ),
+                            Double.parseDouble ( dataset[3] ),
+                            Double.parseDouble ( dataset[4] ),
+                            Double.parseDouble ( dataset[5] ),
+                            dataset[6] );
+                    int numRowsUpdated = update ( con, sqlUpdate, params );
+                    con.commit ( );
+                    /*
+                    String query_st = "INSERT INTO test_db(c1, c2, c3, c4, c5, c6, c7) VALUES ('"+Double.parseDouble ( dataset[0] )+ "', '"+
+                            Double.parseDouble ( dataset[1] )+
+                            "', "+dataset[2]+
+                            "', "+dataset[3]+
+                            "', "+dataset[4]+
+                            "', "+dataset[5]+
+                            "', "+dataset[6]+");";
+                    st.execute ( query_st );
+                    */
+                }
+                st.close ( );
+            } catch (SQLException e) {
+                System.out.print ( e.getMessage ( ) );
+                showError ( );
             }
         }
     } /* End of Database syncing*/
@@ -165,11 +232,16 @@ public class DataBase extends JMenu implements ActionListener {
         }
         catch(Exception e)
         {
-            JOptionPane.showMessageDialog(this,
-                    "The connection is either closed or is null!",
-                    "Error!",
-                    JOptionPane.ERROR_MESSAGE);;
+            showError ( );
         }
+    }
+
+    public void showError() {
+        JOptionPane.showMessageDialog ( this,
+                "The connection is either closed or is null!\nCannot retreive any data",
+                "Error!",
+                JOptionPane.ERROR_MESSAGE );
+        ;
     }
 
     @Override
