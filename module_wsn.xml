@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_wsn" default="compile.module.wsn">
+    <dirname property="module.wsn.basedir" file="${ant.file.module_wsn}"/>
+
+    <property name="module.jdk.home.wsn" value="${project.jdk.home}"/>
+    <property name="module.jdk.bin.wsn" value="${project.jdk.bin}"/>
+    <property name="module.jdk.classpath.wsn" value="${project.jdk.classpath}"/>
+
+    <property name="compiler.args.wsn" value="-encoding UTF-8 -source 1.7 -target 1.7 ${compiler.args}"/>
+
+    <property name="wsn.output.dir" value="${module.wsn.basedir}/out/production/wsn"/>
+    <property name="wsn.testoutput.dir" value="${module.wsn.basedir}/out/test/wsn"/>
+
+    <path id="wsn.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+
+    <path id="wsn.module.production.classpath">
+        <path refid="${module.jdk.classpath.wsn}"/>
+    </path>
+
+    <path id="wsn.runtime.production.module.classpath">
+        <pathelement location="${wsn.output.dir}"/>
+    </path>
+
+    <path id="wsn.module.classpath">
+        <path refid="${module.jdk.classpath.wsn}"/>
+        <pathelement location="${wsn.output.dir}"/>
+    </path>
+
+    <path id="wsn.runtime.module.classpath">
+        <pathelement location="${wsn.testoutput.dir}"/>
+        <pathelement location="${wsn.output.dir}"/>
+    </path>
+
+
+    <patternset id="excluded.from.module.wsn">
+        <patternset refid="ignored.files"/>
+    </patternset>
+
+    <patternset id="excluded.from.compilation.wsn">
+        <patternset refid="excluded.from.module.wsn"/>
+    </patternset>
+
+    <path id="wsn.module.sourcepath">
+        <dirset dir="${module.wsn.basedir}">
+            <include name="src"/>
+        </dirset>
+    </path>
+
+
+    <target name="compile.module.wsn" depends="compile.module.wsn.production,compile.module.wsn.tests"
+            description="Compile module wsn"/>
+
+    <target name="compile.module.wsn.production" depends="register.custom.compilers"
+            description="Compile module wsn; production classes">
+        <mkdir dir="${wsn.output.dir}"/>
+        <javac2 destdir="${wsn.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}"
+                memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.wsn}/javac">
+            <compilerarg line="${compiler.args.wsn}"/>
+            <bootclasspath refid="wsn.module.bootclasspath"/>
+            <classpath refid="wsn.module.production.classpath"/>
+            <src refid="wsn.module.sourcepath"/>
+            <patternset refid="excluded.from.compilation.wsn"/>
+        </javac2>
+
+        <copy todir="${wsn.output.dir}">
+            <fileset dir="${module.wsn.basedir}/src">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile.module.wsn.tests" depends="register.custom.compilers,compile.module.wsn.production"
+            description="compile module wsn; test classes" unless="skip.tests"/>
+
+    <target name="clean.module.wsn" description="cleanup module">
+        <delete dir="${wsn.output.dir}"/>
+        <delete dir="${wsn.testoutput.dir}"/>
+    </target>
+</project>

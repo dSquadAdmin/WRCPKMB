@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - dbase@localhost" uuid="537993ab-bfa5-49ec-89be-a1557fa2f929">
+    <database-info product="PostgreSQL" version="9.5.3" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+      <database id="1" name="dbase">
+        <object-id>17536</object-id>
+        <visible>1</visible>
+      </database>
+      <database id="2" name="postgres">
+        <object-id>12413</object-id>
+      </database>
+      <database id="3" name="msf">
+        <object-id>16385</object-id>
+      </database>
+      <database id="4" name="msf_test_db">
+        <object-id>16387</object-id>
+        <visible>1</visible>
+      </database>
+      <database id="5" name="msf_dev_db">
+        <object-id>16388</object-id>
+      </database>
+      <schema id="6" parent="1" name="public">
+        <object-id>2200</object-id>
+        <visible>1</visible>
+        <introspection-state-number>28485</introspection-state-number>
+        <introspection-timestamp>2016-08-13.18:39:20.414</introspection-timestamp>
+      </schema>
+      <schema id="7" parent="1" name="pg_catalog">
+        <object-id>11</object-id>
+      </schema>
+      <schema id="8" parent="1" name="pg_toast">
+        <object-id>99</object-id>
+      </schema>
+      <schema id="9" parent="1" name="pg_temp_1">
+        <object-id>11816</object-id>
+      </schema>
+      <schema id="10" parent="1" name="pg_toast_temp_1">
+        <object-id>11817</object-id>
+      </schema>
+      <schema id="11" parent="1" name="information_schema">
+        <object-id>12121</object-id>
+      </schema>
+      <sequence id="12" parent="6" name="test_set_id_seq">
+        <object-id>17576</object-id>
+        <state-number>28484</state-number>
+      </sequence>
+      <table id="13" parent="6" name="test_set">
+        <object-id>17578</object-id>
+        <state-number>28484</state-number>
+      </table>
+      <column id="14" parent="13" name="c1">
+        <state-number>28484</state-number>
+        <data-type>numeric|0</data-type>
+      </column>
+      <column id="15" parent="13" name="c2">
+        <state-number>28484</state-number>
+        <data-type>numeric|0</data-type>
+      </column>
+      <column id="16" parent="13" name="c3">
+        <state-number>28484</state-number>
+        <data-type>numeric|0</data-type>
+      </column>
+      <column id="17" parent="13" name="c4">
+        <state-number>28484</state-number>
+        <data-type>numeric|0</data-type>
+      </column>
+      <column id="18" parent="13" name="c5">
+        <state-number>28484</state-number>
+        <data-type>numeric|0</data-type>
+      </column>
+      <column id="19" parent="13" name="c6">
+        <state-number>28484</state-number>
+        <data-type>numeric|0</data-type>
+      </column>
+      <column id="20" parent="13" name="c7">
+        <state-number>28484</state-number>
+        <data-type>char(40)|0</data-type>
+      </column>
+      <column id="21" parent="13" name="id">
+        <state-number>28484</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer|0</data-type>
+        <default-expression>nextval(&apos;test_set_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <index id="22" parent="13" name="test_set_id_uindex">
+        <object-id>17587</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="23" parent="13" name="test_set_pkey">
+        <object-id>17585</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="24" parent="13" name="test_set_pkey">
+        <object-id>17586</object-id>
+        <columns>id</columns>
+        <underlying-index>test_set_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
