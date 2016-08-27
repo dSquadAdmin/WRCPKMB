@@ -149,7 +149,7 @@ public class DataBase extends JMenu implements ActionListener {
                 handle.disp.setText ( "" );
                 ResultSet rs = stmt.executeQuery(query);
                 while(rs.next ()){
-                    String instance = rs.getString ( 1 )+","+rs.getArray ( 2 )+","+rs.getArray ( 3 )+","+rs.getArray ( 4 )+","+rs.getArray ( 5 )+","+rs.getArray ( 6 )+","+rs.getArray ( 7 )+","+rs.getArray ( 8 );
+                    String instance = rs.getDouble ( 1 )+","+rs.getDouble( 2 )+","+rs.getDouble( 3 )+","+rs.getDouble( 4 )+","+rs.getDouble( 5 )+","+rs.getDouble ( 6 )+","+rs.getString ( 7 )+","+rs.getInt ( 8 );
                     handle.disp.append ( instance +"\n" );
                     handle.data1.add ( instance );
                 }
@@ -207,16 +207,6 @@ public class DataBase extends JMenu implements ActionListener {
                             dataset[6] );
                     int numRowsUpdated = update ( con, sqlUpdate, params );
                     con.commit ( );
-                    /*
-                    String query_st = "INSERT INTO test_db(c1, c2, c3, c4, c5, c6, c7) VALUES ('"+Double.parseDouble ( dataset[0] )+ "', '"+
-                            Double.parseDouble ( dataset[1] )+
-                            "', "+dataset[2]+
-                            "', "+dataset[3]+
-                            "', "+dataset[4]+
-                            "', "+dataset[5]+
-                            "', "+dataset[6]+");";
-                    st.execute ( query_st );
-                    */
                 }
                 st.close ( );
             } catch (SQLException e) {

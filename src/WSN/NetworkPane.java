@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  * Created by ksv on 4/3/16.
  */
 
-public class NetworkPane extends JPanel implements ActionListener {
+public class NetworkPane extends JPanel{
 
     private MainLoad mainLoad;
     private NodePane node1, node2, node3;
@@ -28,9 +28,5 @@ public class NetworkPane extends JPanel implements ActionListener {
         add(node1);
         add(node2);
         add(node3);
-    }
-
-
-    public void actionPerformed(ActionEvent e) {
     }
 }

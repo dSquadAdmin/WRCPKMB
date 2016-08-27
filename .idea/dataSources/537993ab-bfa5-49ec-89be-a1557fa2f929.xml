@@ -20,8 +20,8 @@
     <schema id="6" parent="1" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-state-number>28505</introspection-state-number>
-      <introspection-timestamp>2016-08-25.17:28:14.693</introspection-timestamp>
+      <introspection-state-number>28967</introspection-state-number>
+      <introspection-timestamp>2016-08-25.21:50:50.218</introspection-timestamp>
     </schema>
     <schema id="7" parent="1" name="pg_catalog">
       <object-id>11</object-id>
@@ -47,32 +47,32 @@
       <state-number>28504</state-number>
     </table>
     <column id="14" parent="13" name="c1">
-      <state-number>28504</state-number>
+      <state-number>28962</state-number>
       <data-type>double precision|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="15" parent="13" name="c2">
-      <state-number>28504</state-number>
+      <state-number>28963</state-number>
       <data-type>double precision|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="16" parent="13" name="c3">
-      <state-number>28504</state-number>
+      <state-number>28964</state-number>
       <data-type>double precision|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="17" parent="13" name="c4">
-      <state-number>28504</state-number>
+      <state-number>28965</state-number>
       <data-type>double precision|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="18" parent="13" name="c5">
-      <state-number>28504</state-number>
+      <state-number>28966</state-number>
       <data-type>double precision|0</data-type>
       <default-expression>0</default-expression>
     </column>
     <column id="19" parent="13" name="c6">
-      <state-number>28504</state-number>
+      <state-number>28967</state-number>
       <data-type>double precision|0</data-type>
       <default-expression>0</default-expression>
     </column>
