@@ -10,7 +10,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 /**
  * Created by ksv on 4/3/16.
  */
@@ -195,16 +194,16 @@ public class DataBase extends JMenu implements ActionListener {
                 handle.sendStatus ( db );
 
 
-                String sqlUpdate = "INSERT INTO " + db + "(c1, c2, c3, c4, c5, c6, c7) VALUES(?,?,?,?,?,?,?)";
+                String sqlUpdate = "INSERT INTO "+db+"(tl, ir, rh, temp, moisture) VALUES(?,?,?,?,?)";
                 for (String data : handle.data) {
                     String[] dataset = data.split ( "," );
-                    List params = Arrays.asList ( Double.parseDouble ( dataset[0] ),
+                    List params = Arrays.asList (
+                            Double.parseDouble ( dataset[0] ),
                             Double.parseDouble ( dataset[1] ),
                             Double.parseDouble ( dataset[2] ),
                             Double.parseDouble ( dataset[3] ),
-                            Double.parseDouble ( dataset[4] ),
-                            Double.parseDouble ( dataset[5] ),
-                            dataset[6] );
+                            Double.parseDouble ( dataset[4] )
+                            );
                     int numRowsUpdated = update ( con, sqlUpdate, params );
                     con.commit ( );
                 }

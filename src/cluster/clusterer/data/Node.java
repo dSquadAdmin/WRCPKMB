@@ -18,17 +18,17 @@ public class Node {
 
 
     public Node(String instance) {
-        sensor = new double[6];
+        sensor = new double[5];
         product = null;
         String[] value = instance.split(",");
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 5; i++) {
             try {
                 this.sensor[i] = Double.parseDouble(value[i]);
             } catch (NumberFormatException e) {
                 this.sensor[i] = 0;
             }
         }
-        if (value.length > 6) {
+        if (value.length > 5) {
             this.product = new String(value[6]);
         }
 

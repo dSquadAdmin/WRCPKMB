@@ -23,7 +23,7 @@ import java.util.HashMap;
  */
 public class MiningPane extends JPanel implements TreeSelectionListener{
     public JTextArea disp;
-    public ArrayList<String> data = new ArrayList<String> ( );
+    public ArrayList<String> data = new ArrayList<> ( );
     public ArrayList<String> data1 = new ArrayList<> ( ); //data from database
     private JMenuBar mbar;
     private JTree tree;

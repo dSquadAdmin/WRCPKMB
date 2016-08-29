@@ -20,8 +20,8 @@
     <schema id="6" parent="1" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-state-number>29121</introspection-state-number>
-      <introspection-timestamp>2016-08-28.22:51:48.507</introspection-timestamp>
+      <introspection-state-number>29134</introspection-state-number>
+      <introspection-timestamp>2016-08-29.15:30:22.943</introspection-timestamp>
     </schema>
     <schema id="7" parent="1" name="pg_catalog">
       <object-id>11</object-id>
@@ -38,62 +38,51 @@
     <schema id="11" parent="1" name="information_schema">
       <object-id>12121</object-id>
     </schema>
-    <sequence id="12" parent="6" name="data_log_id_seq">
-      <object-id>17636</object-id>
-      <state-number>29120</state-number>
+    <sequence id="12" parent="6" name="table_id_seq">
+      <object-id>17655</object-id>
+      <state-number>29132</state-number>
     </sequence>
-    <table id="13" parent="6" name="data_log">
-      <object-id>17638</object-id>
-      <state-number>29120</state-number>
+    <table id="13" parent="6" name="finaldb">
+      <object-id>17657</object-id>
+      <state-number>29134</state-number>
     </table>
-    <column id="14" parent="13" name="date">
-      <state-number>29120</state-number>
-      <data-type>timestamp with time zone|0</data-type>
-    </column>
-    <column id="15" parent="13" name="temp">
-      <state-number>29120</state-number>
+    <column id="14" parent="13" name="tl">
+      <state-number>29132</state-number>
       <data-type>double precision|0</data-type>
-      <default-expression>0</default-expression>
+    </column>
+    <column id="15" parent="13" name="ir">
+      <state-number>29132</state-number>
+      <data-type>double precision|0</data-type>
     </column>
     <column id="16" parent="13" name="rh">
-      <state-number>29120</state-number>
+      <state-number>29132</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="17" parent="13" name="lux">
-      <state-number>29120</state-number>
+    <column id="17" parent="13" name="temp">
+      <state-number>29132</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="18" parent="13" name="moist">
-      <state-number>29120</state-number>
+    <column id="18" parent="13" name="moisture">
+      <state-number>29132</state-number>
       <data-type>double precision|0</data-type>
     </column>
-    <column id="19" parent="13" name="rain">
-      <state-number>29120</state-number>
-      <data-type>double precision|0</data-type>
-    </column>
-    <column id="20" parent="13" name="id">
-      <state-number>29120</state-number>
+    <column id="19" parent="13" name="id">
+      <state-number>29132</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
-      <default-expression>nextval('data_log_id_seq'::regclass)</default-expression>
+      <default-expression>nextval('table_id_seq'::regclass)</default-expression>
     </column>
-    <index id="21" parent="13" name="data_log_id_uindex">
-      <object-id>17645</object-id>
+    <index id="20" parent="13" name="table_id_uindex">
+      <object-id>17663</object-id>
       <columns>id</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <index id="22" parent="13" name="data_log_pkey">
-      <object-id>17643</object-id>
+    <index id="21" parent="13" name="table_pkey">
+      <object-id>17661</object-id>
       <columns>id</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="23" parent="13" name="data_log_pkey">
-      <object-id>17644</object-id>
-      <columns>id</columns>
-      <underlying-index>data_log_pkey</underlying-index>
-      <primary>1</primary>
-    </key>
   </database-model>
 </dataSource>

@@ -134,6 +134,10 @@ public class NodePane extends JPanel implements ActionListener{
             this.IP.setText ( "IP: 127.0.0.1" );
             this.status.setText ( "Status: Online" );
         }
+
+        if(cmd.equals ( "shutdown" )){
+            this.ct.stop ();
+        }
     }
 
 }

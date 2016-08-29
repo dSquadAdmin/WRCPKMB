@@ -131,7 +131,7 @@ public class DbScan {
 
     private double distance(Node n1, Node n2){
         double sum = 0;
-        for(int i =0; i<6; i++){
+        for(int i =0; i<5; i++){
             double diff = Math.abs(n1.sensor[i]-n2.sensor[i]);
             sum+=diff*diff;
         }
