@@ -145,7 +145,8 @@ public class DbScan {
         }
     }
 
-    public void plot(){
-
+    public ArrayList<Clusters> getClusters(){
+        return clusters;
     }
+
 }

@@ -1,8 +1,11 @@
 package WSN;
 
+import cluster.clusterer.data.Clusters;
 import cluster.clusterer.dbscan.DbScan;
 import cluster.plots.CountMap;
+import cluster.plots.PlotBarGraph;
 import menuPlugin.MBar;
+import org.jfree.ui.RefineryUtilities;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
@@ -10,7 +13,9 @@ import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
 import java.awt.*;
+import java.awt.geom.Arc2D;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 /**
@@ -83,7 +88,7 @@ public class MiningPane extends JPanel implements TreeSelectionListener{
         switch(name){
             case "DBSCAN":
                 if(!data.isEmpty()){
-                    setDbScan ( data );
+                    setDbScan (  data  );
                 }
                 else if(!data1.isEmpty ()){
                     setDbScan ( data1 );
@@ -127,9 +132,96 @@ public class MiningPane extends JPanel implements TreeSelectionListener{
         }
     }
 
+    //Normalize
+    public ArrayList<String> normaLize(ArrayList<String> strings){
+        ArrayList<String> temp = new ArrayList<> ();
+        double[] squaresum = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+        double[] sum = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0,};
+        double[] mean = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0,};
+        double[] sd = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0,};
+        Integer N = strings.size ();
+        System.out.print(N);
+        for(String string: strings){
+            String[] str = string.split ( "," );
+            for(int i= 0; i<6; i++){
+                double tmp = Double.parseDouble ( str[i] );
+                sum[i] = sum[i] + tmp;
+                squaresum[i] = tmp*tmp;
+            }
+        }
+
+        for(int i= 0; i<6; i++){
+            mean[i] = sum[i]/N;
+        }
+
+        for (int i= 0; i<6; i++){
+           sd[i] = Math.sqrt ( (squaresum[i]/N) - (mean[i]*mean[i]) );
+        }
+
+        for(String string: strings){
+            double[] tmp = new double[6];
+            String[] arr = string.split ( "," );
+            for(int i =0; i < 6; i++){
+                if(sd[i] != 0){
+                    tmp[i] = (Double.parseDouble ( arr[i])/sd[i]);
+                }
+                else{
+                    tmp[i] =0;
+                }
+            }
+            String str = tmp[0]+","+tmp[1]+","+tmp[2]+","+tmp[3]+","+tmp[4]+","+tmp[5];
+            if(arr.length > 6){
+                str = str +", "+ arr[6];
+            }
+
+            temp.add ( str );
+        }
+
+        return temp;
+    }  // Normalize the data end
+
+
+
+
+    // plots
     public void plot(){
         //dbScan.plot();
-        new CountMap ( data );
+        CountMap countMap = new CountMap ( data );
+        ArrayList<String> keys = countMap.getKeys ();
+        HashMap<String, Integer> values = (HashMap<String, Integer>) countMap.getCountMaps ();
+        PlotBarGraph pg = new PlotBarGraph ( "WRCKB", "Dataset Plot", keys, values );
+        pg.pack ();
+        RefineryUtilities.centerFrameOnScreen ( pg );
+        pg.setVisible ( true );
+    }
+
+    // cluster plots
+    public void plotBarGraphClusters(){
+        if(dbScan!=null) {
+            ArrayList<Clusters> clusters = dbScan.getClusters ( );
+            ArrayList<String> keys = new ArrayList<> ( );
+            HashMap<String, Integer> map = new HashMap<> ( );
+            int total = 0;
+            for (Clusters c : clusters) { // generate key and map
+                total += c.getSize ( );
+                if (!(c.isNoise ( ))) {
+                    String k = Integer.toString ( c.getId ( ) );
+                    keys.add ( k );
+                    map.put ( k, c.getSize ( ) );
+                }
+            }
+            keys.add ( "Total" );
+            map.put ( "Total", total );
+
+            PlotBarGraph clustergraph = new PlotBarGraph ( "WRCKB", "Cluster Strength", keys, map );
+            clustergraph.pack ( );
+            RefineryUtilities.centerFrameOnScreen ( clustergraph );
+            clustergraph.setVisible ( true );
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Run the DBSCAN ALGORITHM FIRST", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
 }

@@ -23,13 +23,13 @@ public class Node {
         String[] value = instance.split(",");
         for (int i = 0; i < 6; i++) {
             try {
-                sensor[i] = Double.parseDouble(value[i]);
+                this.sensor[i] = Double.parseDouble(value[i]);
             } catch (NumberFormatException e) {
-                sensor[i] = 0;
+                this.sensor[i] = 0;
             }
         }
         if (value.length > 6) {
-            product = new String(value[6]);
+            this.product = new String(value[6]);
         }
 
         this.visited = false;
@@ -57,6 +57,11 @@ public class Node {
 
     public boolean isVisited(){
         return visited;
+    }
+
+
+    public String getProduct(){
+        return this.product;
     }
 
     public void print(){

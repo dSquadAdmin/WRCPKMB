@@ -20,8 +20,8 @@
     <schema id="6" parent="1" name="public">
       <object-id>2200</object-id>
       <visible>1</visible>
-      <introspection-state-number>28967</introspection-state-number>
-      <introspection-timestamp>2016-08-25.21:50:50.218</introspection-timestamp>
+      <introspection-state-number>29121</introspection-state-number>
+      <introspection-timestamp>2016-08-28.22:51:48.507</introspection-timestamp>
     </schema>
     <schema id="7" parent="1" name="pg_catalog">
       <object-id>11</object-id>
@@ -38,70 +38,61 @@
     <schema id="11" parent="1" name="information_schema">
       <object-id>12121</object-id>
     </schema>
-    <sequence id="12" parent="6" name="test_db_id_seq">
-      <object-id>17612</object-id>
-      <state-number>28504</state-number>
+    <sequence id="12" parent="6" name="data_log_id_seq">
+      <object-id>17636</object-id>
+      <state-number>29120</state-number>
     </sequence>
-    <table id="13" parent="6" name="test_db">
-      <object-id>17614</object-id>
-      <state-number>28504</state-number>
+    <table id="13" parent="6" name="data_log">
+      <object-id>17638</object-id>
+      <state-number>29120</state-number>
     </table>
-    <column id="14" parent="13" name="c1">
-      <state-number>28962</state-number>
+    <column id="14" parent="13" name="date">
+      <state-number>29120</state-number>
+      <data-type>timestamp with time zone|0</data-type>
+    </column>
+    <column id="15" parent="13" name="temp">
+      <state-number>29120</state-number>
       <data-type>double precision|0</data-type>
       <default-expression>0</default-expression>
     </column>
-    <column id="15" parent="13" name="c2">
-      <state-number>28963</state-number>
+    <column id="16" parent="13" name="rh">
+      <state-number>29120</state-number>
       <data-type>double precision|0</data-type>
-      <default-expression>0</default-expression>
     </column>
-    <column id="16" parent="13" name="c3">
-      <state-number>28964</state-number>
+    <column id="17" parent="13" name="lux">
+      <state-number>29120</state-number>
       <data-type>double precision|0</data-type>
-      <default-expression>0</default-expression>
     </column>
-    <column id="17" parent="13" name="c4">
-      <state-number>28965</state-number>
+    <column id="18" parent="13" name="moist">
+      <state-number>29120</state-number>
       <data-type>double precision|0</data-type>
-      <default-expression>0</default-expression>
     </column>
-    <column id="18" parent="13" name="c5">
-      <state-number>28966</state-number>
+    <column id="19" parent="13" name="rain">
+      <state-number>29120</state-number>
       <data-type>double precision|0</data-type>
-      <default-expression>0</default-expression>
     </column>
-    <column id="19" parent="13" name="c6">
-      <state-number>28967</state-number>
-      <data-type>double precision|0</data-type>
-      <default-expression>0</default-expression>
-    </column>
-    <column id="20" parent="13" name="c7">
-      <state-number>28504</state-number>
-      <data-type>varchar|0</data-type>
-    </column>
-    <column id="21" parent="13" name="id">
-      <state-number>28504</state-number>
+    <column id="20" parent="13" name="id">
+      <state-number>29120</state-number>
       <mandatory>1</mandatory>
       <data-type>integer|0</data-type>
-      <default-expression>nextval('test_db_id_seq'::regclass)</default-expression>
+      <default-expression>nextval('data_log_id_seq'::regclass)</default-expression>
     </column>
-    <index id="22" parent="13" name="test_db_id_uindex">
-      <object-id>17629</object-id>
+    <index id="21" parent="13" name="data_log_id_uindex">
+      <object-id>17645</object-id>
       <columns>id</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <index id="23" parent="13" name="test_db_pkey">
-      <object-id>17627</object-id>
+    <index id="22" parent="13" name="data_log_pkey">
+      <object-id>17643</object-id>
       <columns>id</columns>
       <desc-columns />
       <unique>1</unique>
     </index>
-    <key id="24" parent="13" name="test_db_pkey">
-      <object-id>17628</object-id>
+    <key id="23" parent="13" name="data_log_pkey">
+      <object-id>17644</object-id>
       <columns>id</columns>
-      <underlying-index>test_db_pkey</underlying-index>
+      <underlying-index>data_log_pkey</underlying-index>
       <primary>1</primary>
     </key>
   </database-model>

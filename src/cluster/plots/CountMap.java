@@ -1,5 +1,7 @@
 package cluster.plots;
 
+import cluster.clusterer.data.Clusters;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,28 +12,47 @@ import java.util.Map;
  */
 public class CountMap {
     private List dataset;
-    private Map count;
+    private Map countmaps;
+    private List keys;
+
 
     public CountMap(ArrayList<String> set) {
         this.dataset = new ArrayList<> ( set );
-        count = new HashMap<String, Integer> ( );
-        setCount ( );
+        countmaps = new HashMap<String, Integer> ( );
+        keys = new ArrayList<> ( computeStrCount ( ));
     }
 
-    private void setCount() {
+    public ArrayList<String> getKeys(){
+        return (ArrayList<String>) keys;
+    }
+
+    public Map getCountMaps(){
+        return countmaps;
+    }
+
+
+    private ArrayList<String> computeStrCount() {
         ArrayList<String> list = new ArrayList<> ( );
-        ArrayList<ArrayList<String>> items = new ArrayList<> ( );
+        String temp = dataset.get ( 1 ).toString ().split ( "," )[6];
+        list.add (0, temp );
         for (Object s : dataset) {
-            list.clear ( );
             String str = s.toString ( ).split ( "," )[6];
-            int count = 0;
+            if(!str.equals ( list.get ( 0 ) )){
+                list.add ( 0, str );
+            }
+            int cnt = 0;
             for (Object s1 : dataset) {
                 String inst = s1.toString ( ).split ( "," )[6];
                 if (inst.equals ( str )) {
-                    count++;
+                    cnt++;
                 }
             }
-            System.out.print ( str + "\t" + count + "\n" );
+            if(!countmaps.containsKey ( str )){
+                countmaps.put ( str, cnt );
+            }
         }
+
+        System.out.print ( list );
+        return list;
     }
 }

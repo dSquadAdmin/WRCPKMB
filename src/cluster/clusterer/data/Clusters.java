@@ -23,14 +23,22 @@ public class Clusters {
 
 
     public ArrayList<Node> getClusture(){
-        return clusture;
+        return this.clusture;
     }
 
     public void setNoise(){
         this.noise = true;
     }
     public boolean isNoise(){
-        return false;
+        return noise;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public int getSize(){
+        return clusture.size ();
     }
 
     public void print(){

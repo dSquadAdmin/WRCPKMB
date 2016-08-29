@@ -14,19 +14,14 @@ import java.awt.event.ActionListener;
 public class NetworkPane extends JPanel{
 
     private MainLoad mainLoad;
-    private NodePane node1, node2, node3;
+    private NodePane node1;
 
     NetworkPane(MainLoad mainLoad) {
-        setLayout(new GridLayout(1, 3));
+        setLayout(new GridLayout());
         this.mainLoad = mainLoad;
         this.mainLoad.setTitle("WSN: Network Monitor");
 
-        node1 = new NodePane("Node 1");
-        node2 = new NodePane("Node 2");
-        node3 = new NodePane("Node 3");
-
+        node1 = new NodePane("Network");
         add(node1);
-        add(node2);
-        add(node3);
     }
 }

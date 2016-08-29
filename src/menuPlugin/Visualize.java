@@ -32,11 +32,11 @@ public class Visualize extends JMenu implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent event){
         if(event.getActionCommand ().equals ( "dataset" )){
-            plotDataSet();
+            handle.plot ();
         }
 
         if(event.getActionCommand ().equals ( "clusters" )){
-            handle.plot ();
+            handle.plotBarGraphClusters ();
         }
     }
 
