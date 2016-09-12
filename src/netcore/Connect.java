@@ -1,19 +1,39 @@
 package netcore;
 
-import javax.swing.*;
+
 import java.io.*;
 import java.net.Socket;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+
 
 /**
  * Created by ksv on 8/27/16.
+ *
+ * Copyright (c) All right reserved Keshav Bist.
+ *
+ * This program is free software; you can redistribute it and/or modify it under the terms
+ * of the GNU Lesser General Public License as published by the Free Software Foundation;
+ * either version 2.1 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License along with this
+ * program if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * [Java is a trademark or registered trademark of Sun Microsystems, Inc.
+ * in the United States and other countries.]
+ *
+ * @Author Keshav Bist <squad.reconn@gmail.com>
+ * @URI http://keshavbist.com.np
  */
 public class Connect implements Runnable {
     private Thread thread;
     private String name;
+    volatile boolean shut = false;
     private NodePane handle;
 
     private Socket sock = null;
@@ -45,20 +65,18 @@ public class Connect implements Runnable {
         statement = connection.createStatement ();
     }
     public void connect() throws  IOException{
-        handle.setMonitor ( "\n starting configurations" );
-        sock = new Socket ( "192.168.0.108", 6660 );
+        sock = new Socket ( "127.0.0.1", 6660 );
         in = sock.getInputStream ();
         out = sock.getOutputStream ();
     }
 
     public void send(byte[] packet) throws IOException{
-        System.out.print ( "\n ssending data " );
+        System.out.print ( "\n sending " );
         out.write (packet);
         out.flush ();
     }
 
     private byte[] receive() throws IOException{
-        handle.setMonitor ( "\n listening for receiving" );
         final int bufSize = 1024;
         byte [] returnBuf;
         byte buf[] = new byte[bufSize];
@@ -91,29 +109,21 @@ public class Connect implements Runnable {
                 connection.setAutoCommit ( false );
             }
 
-            byte[] dataset = new byte[data.length - HEADERLEN];
-
-            System.arraycopy(data, HEADERLEN, dataset, 0, data.length-HEADERLEN);
-            String string = new String ( dataset );
-            System.out.print ( string );
-
-            String sqlUpdate = "INSERT INTO finaldb(tl, ir, rh, temp, moisture) VALUES(?,?,?,?,?)";
+            String string = new String ( data );
             String[] str = string.split ( "," );
-            List params = Arrays.asList (
-                    Double.parseDouble ( str[0] ),
-                    Double.parseDouble ( str[1] ),
-                    Double.parseDouble ( str[2] ),
-                    Double.parseDouble ( str[3] ),
-                    0
-                );
-            PreparedStatement ps = connection.prepareStatement ( sqlUpdate );
-            ps.setObject (1, (Object)params.get ( 0 ) );
-            ps.executeUpdate ();
-            ps.close ();
-            //int numRowsUpdated = updatedb( connection, sqlUpdate, params );
+
+            double val1 = Double.parseDouble ( str[0] );
+            double val2 = Double.parseDouble ( str[1] );
+            double val3 = Double.parseDouble ( str[2] );
+            double val4 = Double.parseDouble ( str[3] );
+            System.out.print ( val1 );
+
+            String sqlUpdate = "INSERT INTO testlog(tl, ir, rh, temp)"
+                    +"VALUES ('"+val1+"','"+val2+"', '"+val3+"','"+val4+"');";
+            st.executeUpdate ( sqlUpdate );
             connection.commit ( );
         } catch (SQLException e) {
-            e.printStackTrace ();
+            System.out.print ( e.getMessage () );
         }
     }// update data base
 
@@ -121,9 +131,9 @@ public class Connect implements Runnable {
     @Override
     public void run(){
         try{
-            handle.setMonitor ( "Connecting to database...." );
+            handle.setMonitor ( "Connecting to database" );
             dbaseConnect ();
-            handle.setMonitor ( "Database Connected ...." );
+            handle.setMonitor ( "Ok!\nConnected" );
         }
         catch(SQLException sqlerror){
             handle.setMonitor ( sqlerror.getMessage () );
@@ -133,29 +143,36 @@ public class Connect implements Runnable {
         }
 
         try {
-            handle.setMonitor ( "Connecting to Network...." );
+            handle.setMonitor ( "Connecting to Network" );
             connect ();
-            handle.setMonitor ( "Connected ...." );
-            handle.setIP ( "192.168.0.1" );
+            handle.setMonitor ( "Ok!\nConnected to network" );
+            handle.setIP (sock.getInetAddress ().toString ());
+            handle.setStatus ( "Online" );
             send ("Hello".getBytes ());
             handle.setMonitor ( "Sending: hello" );
             while(true) {
-                byte [] buffdata = receive ();
-                if(buffdata!=null){
-                    handle.setMonitor ( new String ( buffdata ) );
-                    writeT0DataBase ( buffdata );
+                try {
+                    byte[] buffdata = receive ( );
+                    if(buffdata==null) {
+                        break;
+                    }
+                    int i = (int)buffdata[0];
+                    if (i==1) {
+                        byte[] datatrunc = Arrays.copyOfRange ( buffdata, 4, buffdata.length );
+                        System.out.print ( new String ( datatrunc ) + "\n" );
+                        handle.setMonitor ( new String ( datatrunc ) + "\n" );
+                        writeT0DataBase ( datatrunc );
+                    }
+                }
+                catch (IOException exp){
+                    handle.setMonitor ( "\n"+ exp.getMessage ( ) );
                 }
             }
         }
         catch(IOException excp){
             handle.setMonitor ( "Error! in connection" );
         }
-        if(sock!=null) {
-            handle.setMonitor ( "connected to network" );
-            handle.setIP (sock.getInetAddress ().toString ());
-            handle.setStatus ( "Online" );
-        }
-
+        this.stop ();
     } // run
 
     public void start ()
@@ -178,11 +195,12 @@ public class Connect implements Runnable {
 
             statement.close ();
             connection.close ();
-        }
-        catch (IOException e){
             handle.setMonitor ( "Connection Terminated ............." );
             handle.setIP ( "N/A" );
             handle.setStatus("Offline");
+        }
+        catch (IOException e){
+            handle.setMonitor ( e.getMessage () );
         }
         catch (SQLException ex){
             handle.setMonitor ( "SQL Error .............. " );
